@@ -11,10 +11,13 @@ FamilyInfoView.prototype.bindEvents = function () {
     })
 }
 
-FamilyInfoView.prototype.generateInfo = function (instrumentFamily) {
-    const infoContainer = document.querySelector('#info-container');
+// FamilyInfoView.prototype.generateInfo = function (instrumentFamily) {
+//     const infoContainer = document.querySelector('#info-container');
+//
+    // infoContainer.innerHTML = '';
 
-    infoContainer.innerHTML = '';
+FamilyInfoView.prototype.render = function (instrumentFamily) {
+  this.container.innerHTML = '';
 
     const name = document.createElement('h2');
     name.textContent = instrumentFamily.name;
