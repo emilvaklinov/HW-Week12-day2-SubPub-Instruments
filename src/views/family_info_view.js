@@ -7,17 +7,15 @@ const FamilyInfoView = function () {
 FamilyInfoView.prototype.bindEvents = function () {
     PubSub.subscribe('InstrumentFamilies:selected-family-ready', (event) => {
         const selectedInstrumentFamily = event.detail;
-        this.generateInfo(selectedInstrumentFamily);
+        this.render(selectedInstrumentFamily);
     })
 }
 
-// FamilyInfoView.prototype.generateInfo = function (instrumentFamily) {
-//     const infoContainer = document.querySelector('#info-container');
-//
-    // infoContainer.innerHTML = '';
-
 FamilyInfoView.prototype.render = function (instrumentFamily) {
-  this.container.innerHTML = '';
+    const infoContainer = document.querySelector('#info-container');
+
+    infoContainer.innerHTML = '';
+
 
     const name = document.createElement('h2');
     name.textContent = instrumentFamily.name;
@@ -35,7 +33,7 @@ FamilyInfoView.prototype.render = function (instrumentFamily) {
     const instrumentsArray = instrumentFamily.instruments;
     instrumentsArray.forEach((instrument) => {
         const instrumentLi = document.createElement('li');
-        newLi.textContent = instrument;
+        instrumentLi.textContent = instrument;
         familyInstruments.appendChild(instrumentLi);
     })
     infoContainer.appendChild(familyInstruments);

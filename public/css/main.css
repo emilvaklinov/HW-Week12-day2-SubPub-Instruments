@@ -1,6 +1,6 @@
 body {
   background-color: #c5f1f7;
-  /* background-image: url(/images/instrument.jpg); */
+  background-image: url("../images/instrument.jpg");
   font-family:'Merriweather';
   text-align:center;
 }
@@ -8,4 +8,18 @@ body {
 h1 {
     color: dark;
     text-align: center;
+}
+ul {
+    text-align: center;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 100px);
+   grid-column-gap: 1em;
+   justify-content: center;
+   align-items: center;
+}
+
+
+ul li:hover {
+    background-color: red;
+    color: white;
 }
