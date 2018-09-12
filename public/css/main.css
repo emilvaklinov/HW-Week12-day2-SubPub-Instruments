@@ -1,32 +1,41 @@
 body {
-  background-color: #c5f1f7;
+  /* background-color: #c5f1f7; */
   background-image: url("../images/instrument.jpg");
+  background-blend-mode:luminosity;
   font-family:'Merriweather';
   text-align:center;
 }
 
 h1 {
-    color: dark;
-    text-align: center;
+  color: dark;
+  text-align: center;
+  display: grid;
 }
+p {
+  font-family: fantasy;
+  background-color: white;
+  background-clip: content-box;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
 ul {
   text-align: center;
   text-transform: uppercase;
-   display: grid;
-   grid-template-columns: repeat(auto-fit, 120px);
-   grid-column-gap: 1em;
-   justify-content: center;
-   align-items: center;
-   color: red;
-    list-style-type: none;
-    cursor: pointer;
-    padding: 5px;
-    margin: 3px;
-    border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 130px);
+  grid-column-gap: 1em;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  list-style-type: none;
+  cursor: pointer;
+
 }
 
 
-ul li:hover {
-    background-color: red;
-    color: white;
+li {
+  background-color: red;
+  color: white;
+  border-radius: 7px;
 }
