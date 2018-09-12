@@ -10,12 +10,19 @@ h1 {
     text-align: center;
 }
 ul {
-    text-align: center;
+  text-align: center;
+  text-transform: uppercase;
    display: grid;
-   grid-template-columns: repeat(auto-fit, 100px);
+   grid-template-columns: repeat(auto-fit, 120px);
    grid-column-gap: 1em;
    justify-content: center;
    align-items: center;
+   color: red;
+    list-style-type: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 10px;
 }
 
 
